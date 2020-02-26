@@ -1,17 +1,30 @@
 package Lab4;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class IntermediateCharacterPanel implements CharactersPanel{
     /****Attributes****/
-    private String[] characters = {"Cleric", "Ranger(Not Texas)", "Wizard"};
+    //Array of available characters for this mode
+    private List<String> characters = new ArrayList<>();
+    /****Constructor****/
+    public IntermediateCharacterPanel() {
+        characters.add("Gladiator");
+        characters.add("High Priest");
+        characters.add("Warlock");
+        characters.add("Sorceress");
+    }
     /****Methods****/
+    //add new character to panel
     @Override
     public void addCharacter(String n) {
-        ;
+        characters.add(n);
     }
     //Display available Characters
     @Override
     public void displayCharacters() {
-        System.out.println("Characters: "+Arrays.toString(characters));
+        System.out.println("Characters:");
+        Stream.of(characters.toString())
+                .forEach(System.out::println);
     }
 }

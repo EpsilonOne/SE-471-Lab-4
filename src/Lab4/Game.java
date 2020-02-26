@@ -1,7 +1,5 @@
 package Lab4;
 
-import java.util.Scanner;
-
 public class Game {
     public void newGame(String mode) {
         FactoryUtility myFactory;
@@ -22,15 +20,13 @@ public class Game {
         }
         absFactory.createCharactersPanel().displayCharacters();
         absFactory.createWeaponsPanel().displayWeapons();
-
     }
 
     public static void main(String[] args) {
-
         Game beginner = new Game();
         Game intermediate = new Game();
         Game advanced = new Game();
-        beginner.newGame("BEGINNER");
+        beginner.newGame("BEGINNER");;
         intermediate.newGame("INTERMEDIATE");
         advanced.newGame("ADVANCED");
     }

@@ -1,19 +1,30 @@
 package Lab4;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class AdvancedWeaponPanel implements WeaponsPanel {
     /****Attributes****/
     //Array of available weapons for this mode
-    private String[] weapons = {"Excalibur", "Staff of Warding", "Energy Mace", "Orb of Power"};
+    private List<String> weapons = new ArrayList<>();
+    /****Constructor****/
+    public AdvancedWeaponPanel() {
+        weapons.add("Excalibur");
+        weapons.add("Staff of Warding");
+        weapons.add("Energy Mace");
+        weapons.add("Orb of Power");
+    }
     /****Methods****/
-    //setter
+    //add new Weapon to panel
     @Override
     public void addWeapon(String n) {
-        ;
+        weapons.add(n);
     }
-    //Displays available weapons for this mode
+    //Display available Weapons
     @Override
     public void displayWeapons() {
-        System.out.println("Weapons: "+Arrays.toString(weapons));
+        System.out.println("Weapons:");
+        Stream.of(weapons.toString())
+                .forEach(System.out::println);
     }
 }
