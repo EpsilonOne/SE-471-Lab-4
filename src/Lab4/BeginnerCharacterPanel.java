@@ -9,10 +9,8 @@ public class BeginnerCharacterPanel implements CharactersPanel {
     private List<String> characters = new ArrayList<>();
     /****Constructor****/
     public BeginnerCharacterPanel() {
-        characters.add("Gladiator");
-        characters.add("High Priest");
-        characters.add("Warlock");
-        characters.add("Sorceress");
+        characters.add("Cleric");
+        characters.add("Hunter");
     }
     /****Methods****/
     //add new character to panel

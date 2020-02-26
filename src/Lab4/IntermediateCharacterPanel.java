@@ -9,10 +9,9 @@ public class IntermediateCharacterPanel implements CharactersPanel{
     private List<String> characters = new ArrayList<>();
     /****Constructor****/
     public IntermediateCharacterPanel() {
-        characters.add("Gladiator");
-        characters.add("High Priest");
-        characters.add("Warlock");
-        characters.add("Sorceress");
+        characters.add("Guardian");
+        characters.add("Lancer");
+        characters.add("Witch");
     }
     /****Methods****/
     //add new character to panel
